@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  children: React.ReactDOM;
+  children: React.ReactNode;
 };
 
 const MealsLayout = ({ children }: Props) => {

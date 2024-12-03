@@ -1,22 +1,24 @@
-import { Params } from 'next/dist/server/request/params';
 import React, { Suspense } from 'react';
 import classes from './meals.module.css';
 import Link from 'next/link';
 import MealsGrid from '@/components/meals/meals-grid';
 import { getMeals } from '@/lib/meals';
 import MealsLoadingPage from './loading-out';
+import { Metadata } from 'next';
 
-type Props = {
-  params: Params;
+export const metadata: Metadata = {
+  title: 'All Meals',
+  description: 'Delicious meals shared by our vibrant community!!',
 };
 
 const Meals = async () => {
-  const meals = await getMeals();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const meals = (await getMeals()) as any[];
 
   return <MealsGrid meals={meals} />;
 };
 
-const MealsPage = (props: Props) => {
+const MealsPage = () => {
   return (
     <>
       <header className={classes.header}>

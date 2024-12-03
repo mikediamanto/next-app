@@ -1,9 +1,7 @@
 import React from 'react';
 import classes from './loading.module.css';
 
-type Props = {};
-
-const MealsLoadingPage = (props: Props) => {
+const MealsLoadingPage = () => {
   return <p className={classes.loading}>Fetching meals...</p>;
 };
 

@@ -1,5 +1,5 @@
 'use client';
-import React, { ChangeEvent, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import classes from './image-picker.module.css';
 import Image from 'next/image';
 

@@ -1,12 +1,29 @@
-import { Params } from 'next/dist/server/request/params';
 import React from 'react';
 import classes from './page.module.css';
 import Image from 'next/image';
 import { getMeal } from '@/lib/meals';
 import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
 
 type Props = {
-  params: Params;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  params: any;
+};
+
+export const generateMetadata = async ({
+  params,
+}: Props): Promise<Metadata> => {
+  const meal = (await getMeal(params.mealSlug)) as {
+    title: string;
+    summary: string;
+  };
+
+  if (!meal) notFound();
+
+  return {
+    title: meal.title,
+    description: meal.summary,
+  };
 };
 
 const MealsSlug = async ({ params }: Props) => {
