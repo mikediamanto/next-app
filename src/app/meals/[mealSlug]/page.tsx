@@ -6,7 +6,7 @@ type Props = {
 };
 
 const MealsSlug = ({ params }: Props) => {
-  return <div>MealsSlug {params.slug}</div>;
+  return <div>MealsSlug {params.mealSlug}</div>;
 };
 
 export default MealsSlug;

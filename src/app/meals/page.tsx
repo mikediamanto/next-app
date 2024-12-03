@@ -6,7 +6,11 @@ type Props = {
 };
 
 const Meals = (props: Props) => {
-  return <div>Meals</div>;
+  return (
+    <>
+      <h2>Meals</h2>
+    </>
+  );
 };
 
 export default Meals;
