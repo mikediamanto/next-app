@@ -17,9 +17,7 @@ html {
 body {
   margin: 0;
   background: radial-gradient(#282c34, #282c34);
-  color: #ffffff;
 }
-
 
 .not-found,
 .error {
@@ -47,15 +45,4 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   color: #ddd8d8;
-}
-a,
-a:active,
-a:visited {
-  text-decoration: none;
-  color: var(--color-accent);
-  font-weight: 700;
-}
-
-a:hover {
-  color: rgb(from var(--color-accent) r g b / 0.6);
 }

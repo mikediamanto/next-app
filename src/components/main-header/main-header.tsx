@@ -4,9 +4,9 @@ import React from 'react';
 import logo from '@/assets/logo.png';
 import styles from './main-header.module.css';
 import MainHeaderBackground from './main-header-background';
+import NavLink from './nav-link';
 
 const MainHeader = () => {
-  console.log('Main Header Executing');
   return (
     <>
       <MainHeaderBackground />
@@ -19,12 +19,11 @@ const MainHeader = () => {
         <nav className={styles.nav}>
           <ul>
             <li>
-              <Link href="/community">Community</Link>
+              <NavLink href="/meals">Browse Meals</NavLink>
             </li>
             <li>
-              <Link href="/meals">Browse Meals</Link>
+              <NavLink href="/community">Community</NavLink>
             </li>
-            <li></li>
           </ul>
         </nav>
       </header>
